@@ -34,7 +34,10 @@ namespace BinaryClock
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var dateTime = (DateTime)value;            
+            if (value == null)
+                return Brushes.LightGray;
+
+            var dateTime = (DateTime)value;      
             Brush fillColor = Brushes.LightGray;
                                     
             var sec1 = dateTime.Second % 10;
