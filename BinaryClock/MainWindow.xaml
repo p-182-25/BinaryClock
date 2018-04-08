@@ -21,12 +21,12 @@
             <Setter Property="Height" Value="40" />
             <Setter Property="Fill" Value="LightGray" />
         </Style>
-        <local:DigitalTimerConverter x:Key="dgTimeH10" TimeValue="Hours10" />
-        <local:DigitalTimerConverter x:Key="dgTimeH1" TimeValue="Hours1" />
-        <local:DigitalTimerConverter x:Key="dgTimeM10" TimeValue="Minutes10" />
-        <local:DigitalTimerConverter x:Key="dgTimeM1" TimeValue="Minutes1" />
-        <local:DigitalTimerConverter x:Key="dgTimeS10" TimeValue="Seconds10" />
-        <local:DigitalTimerConverter x:Key="dgTimeS1" TimeValue="Seconds1" />
+        <local:DigitalTimerConverter x:Key="DgTimeH10" TimeValue="Hours10" />
+        <local:DigitalTimerConverter x:Key="DgTimeH1" TimeValue="Hours1" />
+        <local:DigitalTimerConverter x:Key="DgTimeM10" TimeValue="Minutes10" />
+        <local:DigitalTimerConverter x:Key="DgTimeM1" TimeValue="Minutes1" />
+        <local:DigitalTimerConverter x:Key="DgTimeS10" TimeValue="Seconds10" />
+        <local:DigitalTimerConverter x:Key="DgTimeS1" TimeValue="Seconds1" />
         <local:BinaryTimerConverter x:Key="BinaryS1One" BinaryTimeValue="BinaryS1One" />
         <local:BinaryTimerConverter x:Key="BinaryS1Two" BinaryTimeValue="BinaryS1Two" />
         <local:BinaryTimerConverter x:Key="BinaryS1Four" BinaryTimeValue="BinaryS1Four" />
@@ -73,44 +73,47 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <TextBlock Text=":" Grid.Column="2"/>
-        <TextBlock Text=":" Grid.Column="5"/>
+        <TextBlock Text=":" Grid.Row="0" Grid.Column="5"/>
         <TextBlock Text=":" Grid.Column="2" Grid.Row="5"/>
         <TextBlock Text=":" Grid.Column="5" Grid.Row="5"/>
-        <TextBlock Text="H" />
-        <TextBlock Text="H" Grid.Column="1"/>
-        <TextBlock Text="M" Grid.Column="3"/>
-        <TextBlock Text="M" Grid.Column="4"/>
-        <TextBlock Text="S" Grid.Column="6"/>
-        <TextBlock Text="S" Grid.Column="7"/>
-        <TextBlock x:Name="txtHours10" Grid.Row="5" Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource dgTimeH10}}"/>
-        <TextBlock x:Name="txtHours1" Grid.Row="5" Grid.Column="1" Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource dgTimeH1}}"/>
-        <TextBlock x:Name="txtMinutes10" Grid.Row="5" Grid.Column="3" Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource dgTimeM10}}"/>
-        <TextBlock x:Name="txtMinutes1" Grid.Row="5" Grid.Column="4" Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource dgTimeM1}}"/>
-        <TextBlock x:Name="txtSeconds10" Grid.Row="5" Grid.Column="6" Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource dgTimeS10}}"/>
-        <TextBlock x:Name="txtSeconds1" Grid.Row="5" Grid.Column="7" Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource dgTimeS1}}"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="H" />
+        <TextBlock Text="H" Grid.Row="0" Grid.Column="1"/>
+        <TextBlock Text="M" Grid.Row="0" Grid.Column="3"/>
+        <TextBlock Text="M" Grid.Row="0" Grid.Column="4"/>
+        <TextBlock Text="S" Grid.Row="0" Grid.Column="6"/>
+        <TextBlock Text="S" Grid.Row="0" Grid.Column="7"/>
+        <TextBlock x:Name="TxtHours10" Grid.Row="5" Grid.Column="0"
+                   Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource DgTimeH10}}"/>
+        <TextBlock x:Name="TxtHours1" Grid.Row="5" Grid.Column="1" Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource DgTimeH1}}"/>
+        <TextBlock x:Name="TxtMinutes10" Grid.Row="5" Grid.Column="3" Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource DgTimeM10}}"/>
+        <TextBlock x:Name="TxtMinutes1" Grid.Row="5" Grid.Column="4" Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource DgTimeM1}}"/>
+        <TextBlock x:Name="TxtSeconds10" Grid.Row="5" Grid.Column="6" Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource DgTimeS10}}"/>
+        <TextBlock x:Name="TxtSeconds1" Grid.Row="5" Grid.Column="7" Text="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource DgTimeS1}}"/>
         <TextBlock Text="8" Grid.Row="1" Grid.Column="8" FontSize="25"/>
         <TextBlock Text="4" Grid.Row="2" Grid.Column="8" FontSize="25"/>
         <TextBlock Text="2" Grid.Row="3" Grid.Column="8" FontSize="25"/>
         <TextBlock Text="1" Grid.Row="4" Grid.Column="8" FontSize="25"/>
-        <Ellipse x:Name="h10_2" Grid.Row="3" Fill="{Binding CurrentTime, Converter={StaticResource BinaryH10Two}}"/>
-        <Ellipse x:Name="h10_1" Grid.Row="4" Fill="{Binding CurrentTime, Converter={StaticResource BinaryH10One}}"/>
-        <Ellipse x:Name="h1_8" Grid.Row="1" Grid.Column="1" Fill="{Binding CurrentTime, Converter={StaticResource BinaryH1Eight}}"/>
-        <Ellipse x:Name="h1_4" Grid.Row="2" Grid.Column="1" Fill="{Binding CurrentTime, Converter={StaticResource BinaryH1Four}}"/>
-        <Ellipse x:Name="h1_2" Grid.Row="3" Grid.Column="1" Fill="{Binding CurrentTime, Converter={StaticResource BinaryH1Two}}"/>
-        <Ellipse x:Name="h1_1" Grid.Row="4" Grid.Column="1" Fill="{Binding CurrentTime, Converter={StaticResource BinaryH1One}}"/>
-        <Ellipse x:Name="min10_4" Grid.Row="2" Grid.Column="3" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM10Four}}"/>
-        <Ellipse x:Name="min10_2" Grid.Row="3" Grid.Column="3" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM10Two}}"/>
-        <Ellipse x:Name="min10_1" Grid.Row="4" Grid.Column="3" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM10One}}"/>
-        <Ellipse x:Name="min1_8" Grid.Row="1" Grid.Column="4" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM1Eight}}"/>
-        <Ellipse x:Name="min1_4" Grid.Row="2" Grid.Column="4" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM1Four}}"/>
-        <Ellipse x:Name="min1_2" Grid.Row="3" Grid.Column="4" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM1Two}}"/>
-        <Ellipse x:Name="min1_1" Grid.Row="4" Grid.Column="4" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM1One}}"/>
-        <Ellipse x:Name="sec10_4" Grid.Row="2" Grid.Column="6" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS10Four}}"/>
-        <Ellipse x:Name="sec10_2" Grid.Row="3" Grid.Column="6" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS10Two}}"/>
-        <Ellipse x:Name="sec10_1" Grid.Row="4" Grid.Column="6" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS10One}}"/>
-        <Ellipse x:Name="sec1_8" Grid.Row="1" Grid.Column="7" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS1Eight}}"/>
-        <Ellipse x:Name="sec1_4" Grid.Row="2" Grid.Column="7" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS1Four}}"/>
-        <Ellipse x:Name="sec1_2" Grid.Row="3" Grid.Column="7" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS1Two}}"/>
-        <Ellipse x:Name="sec1_1" Grid.Row="4" Grid.Column="7" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS1One}}"/>
+        <Ellipse x:Name="H102" Grid.Row="3" Grid.Column="0"
+                 Fill="{Binding CurrentTime, Converter={StaticResource BinaryH10Two}}"/>
+        <Ellipse x:Name="H101" Grid.Row="4" Grid.Column="0"
+                 Fill="{Binding CurrentTime, Converter={StaticResource BinaryH10One}}"/>
+        <Ellipse x:Name="H18" Grid.Row="1" Grid.Column="1" Fill="{Binding CurrentTime, Converter={StaticResource BinaryH1Eight}}"/>
+        <Ellipse x:Name="H14" Grid.Row="2" Grid.Column="1" Fill="{Binding CurrentTime, Converter={StaticResource BinaryH1Four}}"/>
+        <Ellipse x:Name="H12" Grid.Row="3" Grid.Column="1" Fill="{Binding CurrentTime, Converter={StaticResource BinaryH1Two}}"/>
+        <Ellipse x:Name="H11" Grid.Row="4" Grid.Column="1" Fill="{Binding CurrentTime, Converter={StaticResource BinaryH1One}}"/>
+        <Ellipse x:Name="Min104" Grid.Row="2" Grid.Column="3" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM10Four}}"/>
+        <Ellipse x:Name="Min102" Grid.Row="3" Grid.Column="3" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM10Two}}"/>
+        <Ellipse x:Name="Min101" Grid.Row="4" Grid.Column="3" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM10One}}"/>
+        <Ellipse x:Name="Min18" Grid.Row="1" Grid.Column="4" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM1Eight}}"/>
+        <Ellipse x:Name="Min14" Grid.Row="2" Grid.Column="4" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM1Four}}"/>
+        <Ellipse x:Name="Min12" Grid.Row="3" Grid.Column="4" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM1Two}}"/>
+        <Ellipse x:Name="Min11" Grid.Row="4" Grid.Column="4" Fill="{Binding CurrentTime, Converter={StaticResource BinaryM1One}}"/>
+        <Ellipse x:Name="Sec104" Grid.Row="2" Grid.Column="6" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS10Four}}"/>
+        <Ellipse x:Name="Sec102" Grid.Row="3" Grid.Column="6" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS10Two}}"/>
+        <Ellipse x:Name="Sec101" Grid.Row="4" Grid.Column="6" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS10One}}"/>
+        <Ellipse x:Name="Sec18" Grid.Row="1" Grid.Column="7" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS1Eight}}"/>
+        <Ellipse x:Name="Sec14" Grid.Row="2" Grid.Column="7" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS1Four}}"/>
+        <Ellipse x:Name="Sec12" Grid.Row="3" Grid.Column="7" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS1Two}}"/>
+        <Ellipse x:Name="Sec11" Grid.Row="4" Grid.Column="7" Fill="{Binding CurrentTime, Converter={StaticResource BinaryS1One}}"/>
     </Grid>
 </Window>

@@ -1,0 +1,16 @@
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\bin\Debug\BinaryClock.exe.config
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\bin\Debug\BinaryClock.exe
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\bin\Debug\BinaryClock.pdb
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\BinaryClock.csprojResolveAssemblyReference.cache
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\MainWindow.g.cs
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\App.g.cs
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\BinaryClock_MarkupCompile.cache
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\BinaryClock_MarkupCompile.lref
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\MainWindow.baml
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\BinaryClock.g.resources
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\BinaryClock.Properties.Resources.resources
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\BinaryClock.csproj.GenerateResource.cache
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\BinaryClock.csproj.CoreCompileInputs.cache
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\BinaryClock.exe
+C:\Users\piotrek\Source\Repos\BinaryClock\BinaryClock\obj\Debug\BinaryClock.pdb
