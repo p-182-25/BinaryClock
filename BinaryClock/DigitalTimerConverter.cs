@@ -20,8 +20,8 @@ namespace BinaryClock
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            DateTime dt = (DateTime)value;
-            string time = string.Empty;
+            var dt = (DateTime)value;
+            var time = string.Empty;
             switch (TimeValue)
             {
                 case TimeValue.Hours10:
