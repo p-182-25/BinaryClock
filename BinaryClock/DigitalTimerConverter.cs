@@ -20,6 +20,9 @@ namespace BinaryClock
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null)
+                return DateTime.Now;
+
             var dt = (DateTime)value;
             var time = string.Empty;
             switch (TimeValue)
